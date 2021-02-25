@@ -263,24 +263,8 @@ def rgb_callback(data):
 	# Vcamera = [0,0,0.0,0.05,0.0,-0.0]
 	
 	print('Vcamera= ', Vcamera)
+
 	
-#-------------------------Convert Vcamera to Base Frame----------------------#
-		
-	# Vbase = Vcamera_to_Base_RA.Vc_2_Base(Vcamera,th)
-
-	#-----------------Finding Jacobian-------------#
-
-	# jacobian = jacobian_func.calc_jack(th[0],th[1],th[2],th[3],th[4],th[5])
-	# jacobian = _jacobianM.JACOBIAN(th[0],th[1],th[2],th[3],th[4],th[5])[0][0]
-	# print(jacobian)
-	# jacobian = np.linalg.pinv(jacobian)
-	# Varm = -1*np.matmul(jacobian,Vbase)
-	# print("Varm=",Varm)
-	# T = np.identity(4)
-	# trans = np.identity(4)
-	# for i1 in range (0,6):
-	# 	T = np.array([[m.cos(th[i1]) , -m.sin(th[i1])*m.cos(alp[i1]) , m.sin(th[i1])*m.sin(alp[i1]) , a[i1]*m.cos(th[i1])] , [m.sin(th[i1]) ,m.cos(th[i1])*m.cos(alp[i1]) , -m.cos(th[i1])*m.sin(alp[i1]) , a[i1]*m.sin(th[i1])] , [0 , m.sin(alp[i1]) , m.cos(alp[i1]) , d[i1]] , [0 , 0 , 0 , 1]])
-	# 	trans = np.matmul(trans,T)
 	
 	# plot = Plots.plot(Varm,error,th,r1,c1,r2,c2,r3,c3,r4,c4,trans)
 	
@@ -301,15 +285,9 @@ def main():
 	sub1 = rospy.Subscriber('camera/depth/image_rect_raw', Image, depth_callback, queue_size=1)
 	
 	pub=rospy.Publisher('/gen3_lite/in/cartesian_velocity', TwistCommand,  queue_size=10)
-	# pub1 = rospy.Publisher('joint_angles_cmd', joint_angles,  queue_size=10)
-	# Arm_vel = rospy.Publisher('/Arm_velocity', Float64MultiArray, queue_size = 10)
-	# Arm_vel_msg = Float64MultiArray()
-	msg = TwistCommand()
 	
-
-
-	# # jv = joint_vel()
-	# # ja = joint_angles()
+	msg = TwistCommand()
+	Vcamera = np.array([0.05,0,0,0,0,0])
 	
 	while not rospy.is_shutdown():		
 		msg.twist.linear_x= Vcamera[0]
@@ -318,16 +296,6 @@ def main():
 		msg.twist.angular_x= Vcamera[3]
 		msg.twist.angular_y= Vcamera[4]
 		msg.twist.angular_z= Vcamera[5]
-		# jv.vel0.data = Varm.item(0)
-		# jv.vel1.data = Varm.item(1)
-		# jv.vel2.data = Varm.item(2)
-		# jv.vel3.data = Varm.item(3)
-		# jv.vel4.data = Varm.item(4)
-		# jv.vel5.data = Varm.item(5)
-		# Varm_j = np.array([Varm[0], Varm[1], Varm[2], Varm[3], Varm[4], Varm[5]])
-		# Arm_vel_msg.data = Varm_j
-
-		# Arm_vel.publish(Arm_vel_msg)
 		pub.publish(msg)
 
 		cv2.imshow("Image window", img)
