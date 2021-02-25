@@ -287,7 +287,6 @@ def main():
 	pub=rospy.Publisher('/gen3_lite/in/cartesian_velocity', TwistCommand,  queue_size=10)
 	
 	msg = TwistCommand()
-	Vcamera = np.array([0.05,0,0,0,0,0])
 	
 	while not rospy.is_shutdown():		
 		msg.twist.linear_x= Vcamera[0]
