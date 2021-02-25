@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/devel/include/**",
+        "/home/robotics/Workspace/ws_ROS/visual_serv_ur5_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/src/ros_kortex/third_party/gazebo-pkgs/gazebo_grasp_plugin/include/**",
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/src/ros_kortex/third_party/gazebo-pkgs/gazebo_version_helpers/include/**",
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/src/ros_kortex/kortex_driver/include/**",
+        "/home/robotics/Workspace/ws_ROS/visual_serv_ur5_ws/src/openni_camera/openni_camera/include/**",
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/src/realsense-ros/realsense2_camera/include/**",
+        "/home/robotics/Workspace/ws_ROS/Kinova_WS/src/ros_kortex/third_party/roboticsgroup_gazebo_plugins/include/**",
+        "/home/robotics/Workspace/ws_ROS/visual_serv_ur5_ws/src/universal_robot/ur_kinematics/include/**",
+        "/home/robotics/Workspace/ws_ROS/visual_serv_ur5_ws/src/universal_robot/ur_modern_driver/include/**",
+        "/home/robotics/Workspace/ws_ROS/visual_serv_ur5_ws/src/visual_serv_ur5_nodes/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
