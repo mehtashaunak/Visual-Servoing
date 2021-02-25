@@ -1,0 +1,10 @@
+package joint_velocity_msgs.msgs;
+message JointVelocities
+{
+  required double vel1 = 1;
+  required double vel2 = 2;
+  required double vel3 = 3;
+  required double vel4 = 4;
+  required double vel5 = 5;
+  required double vel6 = 6;
+}

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ur5_vs
+Description: Description of ur5_vs
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lur5_ik
+Requires: roscpp rospy std_msgs geometry_msgs visualization_msgs message_runtime

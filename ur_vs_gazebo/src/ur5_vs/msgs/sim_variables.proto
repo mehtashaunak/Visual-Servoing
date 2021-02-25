@@ -1,0 +1,6 @@
+package sim_variable_msgs.msgs;
+message SimVariables
+{
+  required bool sim_enable = 1;
+  required bool reconfigure = 2;
+}

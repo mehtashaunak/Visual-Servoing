@@ -1,0 +1,7 @@
+package image_data_msgs.msgs;
+message ImageData
+{
+  required float centroid_x = 1;
+  required float centroid_y = 2;
+
+}

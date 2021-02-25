@@ -1,0 +1,2 @@
+set(ur5_vs_MESSAGE_FILES "/home/shaunak/ur_vs_gazebo/src/ur5_vs/msgs/joint_vel.msg;/home/shaunak/ur_vs_gazebo/src/ur5_vs/msgs/sim_variables.msg;/home/shaunak/ur_vs_gazebo/src/ur5_vs/msgs/joint_angles.msg;/home/shaunak/ur_vs_gazebo/src/ur5_vs/msgs/joint_states.msg")
+set(ur5_vs_SERVICE_FILES "")

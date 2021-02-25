@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/shaunak/ur_vs_gazebo/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/shaunak/ur_vs_gazebo/src/object_detection/include/**",
+                "/home/shaunak/ur_vs_gazebo/src/openni_camera/openni_camera/include/**",
+                "/home/shaunak/ur_vs_gazebo/src/ur5_vs/include/**",
+                "/home/shaunak/ur_vs_gazebo/src/universal_robot/ur_kinematics/include/**",
+                "/home/shaunak/ur_vs_gazebo/src/universal_robot/ur_modern_driver/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

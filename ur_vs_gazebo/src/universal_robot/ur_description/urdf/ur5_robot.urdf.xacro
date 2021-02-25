@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur5" >
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+  <!--ur-->
+  <!-- change child_link to base_link below-->
+  <!--xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" /-->
+
+  <!-- ur5 with stand-->
+  <!-- change child_link to robot_stand below-->
+  <xacro:include filename="$(find ur_description)/urdf/ur5_with_stand.urdf.xacro" />
+
+  <!-- ur5 with stand and object-->
+  <!-- change child_link to robot_stand below-->
+  <!--xacro:include filename="$(find ur_description)/urdf/ur5_with_stand_object.urdf.xacro" /-->
+
+  <!-- ur5 with stand and gripper-->
+  <!-- change child_link to robot_stand below-->
+  <!--xacro:include filename="$(find ur_description)/urdf/ur5_with_stand_gripper.urdf.xacro" /-->
+
+  <!-- realsense -->
+  <!-- <xacro:include filename="$(find ur_description)/urdf/r200.urdf.xacro" />
+  <xacro:sensor_r200 parent="ee_link"/> -->
+
+  <!-- arm -->
+  <xacro:ur5_robot prefix="" joint_limited="false"/>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "robot_stand" />
+    <origin xyz="-0.305 -0.305 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

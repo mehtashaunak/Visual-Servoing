@@ -1,0 +1,10 @@
+package joint_angle_msgs.msgs;
+message JointAngles
+{
+  required double angle1 = 1;
+  required double angle2 = 2;
+  required double angle3 = 3;
+  required double angle4 = 4;
+  required double angle5 = 5;
+  required double angle6 = 6;
+}

@@ -1,0 +1,10 @@
+package joint_effort_msgs.msgs;
+message JointEfforts
+{
+  required double torque1 = 1;
+  required double torque2 = 2;
+  required double torque3 = 3;
+  required double torque4 = 4;
+  required double torque5 = 5;
+  required double torque6 = 6;
+}

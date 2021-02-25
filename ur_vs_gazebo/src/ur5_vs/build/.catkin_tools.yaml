@@ -1,0 +1,6 @@
+devel_space: /home/robotics/Workspace/ws_ROS/ur_vs_gazebo/src/ur5_vs/devel
+install: false
+install_space: /home/robotics/Workspace/ws_ROS/ur_vs_gazebo/src/ur5_vs/install
+profile: default
+source_space: /home/robotics/Workspace/ws_ROS/ur_vs_gazebo/src/ur5_vs/src
+workspace: /home/robotics/Workspace/ws_ROS/ur_vs_gazebo/src/ur5_vs

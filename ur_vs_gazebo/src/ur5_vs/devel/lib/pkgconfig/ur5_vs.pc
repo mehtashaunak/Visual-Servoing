@@ -1,0 +1,8 @@
+prefix=/home/shaunak/ur_vs_gazebo/src/ur5_vs/devel
+
+Name: ur5_vs
+Description: Description of ur5_vs
+Version: 0.0.0
+Cflags: -I/home/shaunak/ur_vs_gazebo/src/ur5_vs/devel/include -I/home/shaunak/ur_vs_gazebo/src/ur5_vs/include
+Libs: -L/home/shaunak/ur_vs_gazebo/src/ur5_vs/devel/lib -lur5_ik
+Requires: roscpp rospy std_msgs geometry_msgs visualization_msgs message_runtime
